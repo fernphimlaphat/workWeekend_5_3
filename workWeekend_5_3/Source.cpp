@@ -44,30 +44,39 @@ int main(){
 
     int x,i = 0;
     scanf_s("%d",&x);
-    binary(x, i);
-    printf("\n");
-    
-    printf("sqrt X = %.2lf", sqrX(x));
-    printf("\n");
+    if (x >=0 && x < 32600 ) {
+        binary(x, i);
 
-    printf("X^2 = %d", powerX(x));
-    
-    printf("\n");
 
-    OddEvern(x);
-    if (OddEvern(x) == 0)
-    {
-        printf("%d is Even", OddEvern(x));
+        printf("\n");
+
+        printf("sqrt %d = %.2lf",x, sqrX(x));
+        printf("\n");
+
+        printf("%d^2 = %d",x, powerX(x));
+
+        printf("\n");
+
+        OddEvern(x);
+        if (OddEvern(x) == 0)
+        {
+            printf("%d is Even", x);
+        }
+        else
+        {
+            if (OddEvern(x) == 1)
+                printf("%d is Odd",x);
+
+            else
+            {
+                printf("Notfound");
+            }
+        }
     }
-    else if (OddEvern(x) == 1)
-    {
-        printf("%d is Odd", OddEvern(x));
-    }
+
     else
     {
-        printf("Notfound");
+        printf("ERROR");
     }
-
-
 
 }
